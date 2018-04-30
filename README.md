@@ -32,8 +32,10 @@ AS of now, available functionality
 •	Retrieve the list of products based on simple search criteria e.g. product type
 •	Remove a product from the catalogue. 
 
-For the add to cart functionality, enhancements needed are:-
+##TODO
+
 - user login to be enabled using backend spring security. The session token created will be stored, in to a redis server as key, value and session will be managed from browser by storing the token in 
 cookies/Local storage. 
+- Enhance Add to cart functionality, after establishing user login.
 - Add UI tests 
 
