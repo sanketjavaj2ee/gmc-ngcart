@@ -1,0 +1,24 @@
+<h3>List of Products:-</h3>
+<br>Add product
+<form class="well">
+  <input placeholder="Enter Product Name" [(ngModel)]="formProduct.name" name ="txtName">
+  <input placeholder="Enter Product Description" [(ngModel)]="formProduct.desc" name ="txtDesc">
+  <input placeholder="Enter Product Price" [(ngModel)]="formProduct.price" name ="txtPrice">
+  <button class="btn-xs btn-primary" (click)="saveProduct()">Save</button>
+</form>
+
+<br> Podcuts
+<table class="table table-bordered table-striped">
+  <tr><th>Id</th><th>Name</th><th>Description</th><th>Price</th><th>Action</th></tr>
+
+  <tr *ngIf="products.length == 0">
+    <td colspan="3">No products found..</td>
+  </tr>
+  <tr *ngFor = "let product of products; let i = index">
+    <td>{{product.id}}</td><td>{{product.name}}</td><td>{{product.desc}}</td><td>{{product.price}}</td>
+    <td>
+      <button class="btn-xs btn-success" (click)="editProduct(product, i)">Edit</button>
+      <button class="btn-xs btn-danger" (click)="deleteProduct(product.id, i)" >Delete</button>
+    </td>
+  </tr>
+</table>
