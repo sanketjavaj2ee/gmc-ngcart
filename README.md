@@ -26,3 +26,14 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+AS of now, available functionality
+•	Add a product
+•	Retrieve the list of products based on simple search criteria e.g. product type
+•	Remove a product from the catalogue. 
+
+For the add to cart functionality, enhancements needed are:-
+- user login to be enabled using backend spring security. The session token created will be stored, in to a redis server as key, value and session will be managed from browser by storing the token in 
+cookies/Local storage. 
+- Add UI tests 
+
