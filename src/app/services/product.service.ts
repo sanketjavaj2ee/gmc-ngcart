@@ -23,7 +23,7 @@ export class ProductService {
       new Product('2', 'Sony LED', 999, "Sony LED TV"),
       new Product('3', 'Micoramax Soundbox', 888, "Micromax uhu")
     ]*/
-   this.http.get(this.restUrl).subscribe(
+   this.http.get(this.restUrl+"getProducts").subscribe(
       (resp) => {
         console.log(resp.json())
         this.ProductsData = resp.json();
@@ -36,7 +36,7 @@ export class ProductService {
 
   addProduct(formProduct:Product, editIndex: number) {
     //if product i null, will return bad req
-    this.http.post(this.restUrl, formProduct).subscribe(
+    this.http.post(this.restUrl+"save", formProduct).subscribe(
       (resp) => {
         console.log("Saved");
         if(editIndex) {
@@ -56,7 +56,7 @@ export class ProductService {
   }
 
   deleteProduct(id: String, index:number) {
-    this.http.delete(this.restUrl+"/"+id).subscribe(
+    this.http.delete(this.restUrl+"delete/"+id).subscribe(
       (resp) => {
         console.log("Deleted");
         this.ProductsData.splice(index, 1);//TOO:reflect back to component
