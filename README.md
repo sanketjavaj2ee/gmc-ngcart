@@ -33,9 +33,8 @@ AS of now, available functionality
 •	Remove a product from the catalogue. 
 
 ##TODO
-
-- user login to be enabled using backend spring security. The session token created will be stored, in to a redis server as key, value and session will be managed from browser by storing the token in 
-cookies/Local storage. 
+- Add exception handling
+- user login to be enabled, where on succesful login session token will be stored in cookies/Local storage for session management
 - Enhance Add to cart functionality, after establishing user login.
 - Add UI tests 
 
